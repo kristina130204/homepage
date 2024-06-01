@@ -26,7 +26,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   gap: 50px;
 }
 
@@ -39,7 +38,6 @@ body {
 
 .resume {
   margin: 50px auto;
-  border: 1px solid #f5f5f5;
   padding: 30px 0;
   max-width: 900px;
 }
@@ -219,6 +217,9 @@ body {
 
 .additional-info__education {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .additional-info__education-header {
@@ -232,6 +233,17 @@ body {
   text-align: left;
   margin-bottom: 10px;
   font-size: 15px;
+}
+
+.additional-info__education-university-block {
+  display: flex;
+  gap: 50px;
+  margin-top: 10px;
+}
+
+.line {
+  width: 5px;
+  background: var(--border-color);
 }
 
 .additional-info__education-university-speciality {
@@ -256,4 +268,8 @@ body {
 
 .additional-info__languages-item {
   color: var(--secondary-text-color);
+}
+.additional-info__languages-item::before {
+  content: "✔️";
+  margin-right: 10px;
 }
