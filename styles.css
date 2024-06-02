@@ -14,11 +14,64 @@ body {
   --icon-color: #6a737d;
   --border-color: #e65e593b;
   --text-decoration-color: #e65e59;
-  --blur-color-first: #f39f99;
+  --blur-color-first: #f3baa3;
   --blur-color-second: #76d1f5;
   --background-color: #ffffff4d;
   --box-shadow: 5px 15px 15px #0000000e;
   position: relative;
+}
+
+.toTop {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--background-color);
+  cursor: pointer;
+  z-index: 33;
+}
+
+.toTop:hover {
+  background: var(--border-color);
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blur-color-first);
+  z-index: 55;
+}
+
+#preloader.hide-preloader {
+  animation: hidePreloader 2s;
+}
+
+#preloader.preloader-hidden {
+  display: none;
+}
+
+@keyframes hidePreloader {
+  from {
+    opacity: 1;
+    display: block;
+  }
+  to {
+    transform: translateY(-1000px);
+    opacity: 0;
+    display: none;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -364,8 +417,8 @@ h1.header {
   transform: scale(1.03);
 }
 
-.timeline .event:hover:after{
-  transition: all .3s ease-in;
+.timeline .event:hover:after {
+  transition: all 0.3s ease-in;
   background: var(--blur-color-first);
 }
 
