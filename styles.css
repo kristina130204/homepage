@@ -109,24 +109,6 @@ i {
   box-shadow: var(--box-shadow);
 }
 
-@media screen and (max-width: 576px) {
-  .main-info,
-  .contact_info_container {
-    flex-direction: column;
-  }
-
-  .contact_info_container {
-    align-items: center;
-  }
-
-  .contact-info__block:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  .experiences {
-    margin-right: 0;
-  }
-}
 .contact-info__header,
 .contact-info__sub-header {
   text-align: center;
@@ -373,10 +355,27 @@ h1.header {
   top: 5px;
 }
 
+@media screen and (max-width: 1280px) {
+  .resume {
+    flex-direction: column;
+    width: 80%;
+  }
+  .sidebar{
+    width: 100%;
+  }
+}
+
 @media (max-width: 945px) {
+  #content {
+    text-align: center;
+    padding-left: 0;
+  }
+  section.timeline-outer {
+    width: 100%;
+  }
   .timeline .event::before {
     left: 0.5px;
-    top: 20px;
+    top: -20px;
     min-width: 0;
     font-size: 13px;
   }
@@ -395,19 +394,39 @@ h1.header {
 @media (max-width: 768px) {
   .timeline .event::before {
     left: 0.5px;
-    top: 20px;
+    top: -20px;
     min-width: 0;
     font-size: 13px;
-  }
-  .timeline .event:nth-child(1)::before,
-  .timeline .event:nth-child(3)::before,
-  .timeline .event:nth-child(5)::before {
-    top: 38px;
   }
   .timeline h3 {
     font-size: 16px;
   }
   .timeline p {
     padding-top: 20px;
+  }
+  .fh{
+    flex-direction: column;
+  }
+}
+@media (max-width: 520px) {
+  .resume {
+    width: 90%;
+  }
+  .contact-info__avatar{
+    width: 100px;
+    height: 100px;
+  }
+  .contact-info__header{
+    font-size: 24px;
+  }
+  .contact-info__sub-header{
+    font-size: 18px;
+  }
+  .additional-info__education-university-speciality{
+    font-size: 18px;
+  }
+  .intro__icon-wrapper {
+    margin-right: 20px;
+    width: 15px;
   }
 }
